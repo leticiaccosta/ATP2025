@@ -7,4 +7,10 @@ A aplicação permite criar uma turma, inserir e listar alunos, consultar por ID
 Durante o desenvolvimento, a principal dificuldade foi garantir que a inserção de alunos evitasse duplicados e que o carregamento dos dados a partir do ficheiro funcionasse corretamente. Tive também alguns desafios com os caminhos dos ficheiros no Windows e com o formato das notas dentro da lista.  
 Com alguma pesquisa, testes e correções, consegui resolver esses problemas e obter uma aplicação funcional e estável. Este trabalho ajudou-me a melhorar a minha compreensão da lógica de programação, especialmente na estruturação de funções e no tratamento de dados guardados em ficheiros.
 ## Lista de resultados
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/b9287505-dabe-468d-b39c-d625f134f0dc" />
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/7d4975b7-8b6d-4852-a08f-9559354285cd" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/84e52330-e266-4f91-a9a6-e2d0809778db" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/9be4c55b-6226-481b-b945-4773497c6b27" />
