@@ -79,7 +79,6 @@ projeto_atp_clinica/
 ├── example_avancado.py           # Exemplos de utilização
 ├── main_avancado.py              # Ponto de entrada da aplicação
 ├── pessoas.json                  # Dataset de pacientes reais
-├── requirements.txt              # Dependências Python
 └── README.md                      # Esta documentação
 
 
