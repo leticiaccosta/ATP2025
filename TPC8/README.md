@@ -93,7 +93,6 @@ Implementa o paradigma de simulação de eventos discretos com:
 - Gestão de recursos (médicos, turnos, pausas)
 - Coleta automática de métricas e estatísticas
 
-*Complexidade temporal:* O(n log n) para processamento de n eventos
 
 #### 2. Análise e Visualização (analysis_avancado.py)
 
