@@ -75,7 +75,7 @@ O projeto está organizado em módulos especializados:
 projeto_atp_clinica/
 ├── sim_module_avancado.py        # Motor de simulação (eventos discretos)
 ├── analysis_avancado.py          # Análise e geração de gráficos
-├── gui_corrigido_sem_emoji.py    # Interface gráfica (PySimpleGUI)
+├── gui_avancado.py    # Interface gráfica (PySimpleGUI)
 ├── example_avancado.py           # Exemplos de utilização
 ├── main_avancado.py              # Ponto de entrada da aplicação
 ├── pessoas.json                  # Dataset de pacientes reais
@@ -105,7 +105,7 @@ Fornece:
 - Análise comparativa automatizada
 - Suporte a gravação de gráficos em alta resolução (300 DPI)
 
-#### 3. Interface Gráfica (gui_corrigido_sem_emoji.py)
+#### 3. Interface Gráfica (gui_avancado.py)
 
 Desenvolve interface profissional com:
 - PySimpleGUI para componentes visuais
@@ -250,28 +250,10 @@ matplotlib>=3.4.0
 PySimpleGUI>=4.60.0
 
 
-### Instalação
-
-bash
-# Clonar repositório
-git clone https://github.com/seu-usuario/projeto-atp-clinica.git
-cd projeto-atp-clinica
-
-# Criar ambiente virtual (recomendado)
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-# ou
-venv\Scripts\activate  # Windows
-
-# Instalar dependências
-pip install -r requirements.txt
-
-
 ### Execução
 
 #### Via Interface Gráfica
 
-bash
 python main_avancado.py
 
 
@@ -283,42 +265,11 @@ A interface gráfica abrirá permitindo:
 
 #### Via Linha de Comando
 
-bash
 # Exemplos pré-configurados
 python example_avancado.py
 
 # Menu interativo com sete exemplos
 Escolha um exemplo (0-8): 1  # Simulação básica
-
-
-#### Programático (Código Python)
-
-python
-from sim_module_avancado import Simulacao
-from analysis_avancado import AnalisadorResultados
-
-# Configuração
-config = {
-    'num_medicos': 4,
-    'taxa_chegada': 20 / 60.0,
-    'tempo_medio_consulta': 15,
-    'tempo_simulacao': 480,
-    'distribuicao': 'uniform',
-    'usar_triagem': True,
-    'usar_turnos': True,
-    'usar_pausas': True,
-    'chegadas_nao_homogeneas': True
-}
-
-# Executar simulação
-sim = Simulacao(config)
-resultados = sim.simular()
-
-# Gerar relatório
-analisador = AnalisadorResultados(resultados)
-print(analisador.gerar_relatorio_texto())
-analisador.plot_todos_graficos()
-
 
 ---
 
@@ -349,23 +300,6 @@ Varia taxa de chegada em incrementos configuráveis e gera gráficos comparativo
 
 ### Ficheiros de Entrada
 
-#### config.json (Opcional)
-
-json
-{
-  "num_medicos": 4,
-  "taxa_chegada": 0.333,
-  "tempo_medio_consulta": 15,
-  "tempo_simulacao": 480,
-  "distribuicao": "uniform",
-  "usar_triagem": true,
-  "tempo_max_espera": 90,
-  "usar_turnos": true,
-  "usar_pausas": true,
-  "chegadas_nao_homogeneas": true
-}
-
-
 #### pessoas.json
 
 Dataset de pacientes reais (estrutura livre, recomenda-se incluir campos: id, nome, idade, gênero)
@@ -391,11 +325,11 @@ Dataset de pacientes reais (estrutura livre, recomenda-se incluir campos: id, no
 Durante o desenvolvimento deste projeto, foram gerados diversos ficheiros que constituem a base da solução:
 
 *Código-fonte Python (5 ficheiros):*
-- sim_module_avancado.py — Motor principal da simulação (enviado)
-- analysis_avancado.py — Módulo de análises e gráficos (enviado)
-- gui_corrigido_sem_emoji.py — Interface gráfica sem emojis (enviado)
-- example_avancado.py — Exemplos de utilização (enviado)
-- main_avancado.py — Ponto de entrada (enviado)
+- sim_module_avancado.py — Motor principal da simulação
+- analysis_avancado.py — Módulo de análises e gráficos 
+- gui_avancado.py — Interface gráfica sem emojis 
+- example_avancado.py — Exemplos de utilização
+- main_avancado.py — Ponto de entrada 
 
 *Documentação em PDF:*
 - Relatório_Projeto_ATP.pdf — Relatório académico formal com 11 páginas contendo análise completa, especificação de requisitos, modelação matemática, testes e validação
@@ -408,10 +342,6 @@ Durante o desenvolvimento deste projeto, foram gerados diversos ficheiros que co
 
 .
 ├── README.md                  (este ficheiro)
-├── requirements.txt           (dependências: numpy, matplotlib, PySimpleGUI)
-├── LICENSE                    (MIT)
-├── .gitignore
-│
 ├── src/
 │   ├── sim_module_avancado.py
 │   ├── analysis_avancado.py
@@ -490,13 +420,11 @@ Os resultados de cada cenário foram verificados manualmente e confirmam comport
 ### Como Usar Este Repositório
 
 *Para testar rapidamente:*
-bash
 python main_avancado.py
 
 Abre interface gráfica onde pode configurar e executar simulações.
 
 *Para ver exemplos:*
-bash
 python example_avancado.py
 
 Menu interativo com 7 exemplos pré-configurados.
@@ -509,14 +437,6 @@ sim = Simulacao(config)
 resultados = sim.simular()
 
 
-### Decisões Importantes Tomadas
-
-1. *Python 3.9+* — Linguagem escolhida por ser rápida de desenvolver, ter bibliotecas científicas robustas e ser legível
-2. *Arquitetura modular* — Cada funcionalidade num ficheiro separado permite trabalho em paralelo e testes independentes
-3. *Fila com prioridade* — Implementada com inserção ordena para refletir realidade clínica (urgências têm precedência)
-4. *Callback para progresso* — Interface não congela durante simulação, utilizador vê progresso
-5. *Gráficos em matplotlib* — Simples, profissional, fácil de customizar
-
 ### Sobre os Ficheiros Enviados
 
 Os 5 ficheiros Python foram desenvolvidos conforme especificação de requisitos e estão prontos para usar:
@@ -524,22 +444,7 @@ Os 5 ficheiros Python foram desenvolvidos conforme especificação de requisitos
 - Têm comentários explicativos nas seções complexas
 - Usam type hints para clareza
 - Foram testados em múltiplos cenários
-- Não têm dependências além das listadas em requirements.txt
 - Código está formatado de forma consistente
-
-### Próximos Passos Lógicos
-
-Se este projeto fosse continuado, a ordem natural seria:
-
-1. Adicionar testes unitários para as funções críticas
-2. Implementar gravação de resultados em CSV/Excel
-3. Estender para suportar múltiplas especialidades médicas
-4. Adicionar otimizador que sugira configurações ideias
-5. Criar versão web (backend API + frontend React/Vue)
-
-Mas para os objetivos atuais (trabalho académico de ATP), o projeto está completo e funcional.
-
----
 
 ---
 
@@ -660,40 +565,6 @@ Os dados gerados durante a simulação permitem insights operacionais relevantes
    - Cada paciente que abandona representa custo não apenas económico mas também reputacional
    - Limite de espera de 90 minutos é adequado para a maioria dos cenários
 
-#### Decisões Técnicas Justificadas
-
-*Escolha de Python:*
-- Facilita prototipagem rápida sem sacrificar robustez
-- Ecossistema rico em bibliotecas científicas (NumPy, Matplotlib)
-- Código resultante é legível e fácil de manter para futuras equipas
-
-*Arquitetura Modular:*
-- Permitiu desenvolvimento paralelo (cada membro trabalha num módulo)
-- Facilita testes isolados de cada componente
-- Possibilita reuso de código (classe Simulacao pode ser importada em outras aplicações)
-
-*Estrutura de Fila com Prioridade:*
-- Simulação de realidade clínica onde urgências têm precedência
-- Implementação em O(n) é eficiente para escala deste projeto
-- Facilmente extensível para múltiplas especialidades no futuro
-
-#### Contribuições Individuais Relevantes
-
-*Matilde Castanheira* — Motor de simulação:
-- Implementação rigorosa de Processo de Poisson não-homogêneo
-- Algoritmo inteligente para gestão de turnos e pausas
-- Estrutura de dados otimizada para fila de eventos
-
-*Letícia Costa* — Análise e visualização:
-- Oito gráficos distintos, cada um destacando aspetos diferentes
-- Relatórios textuais bem formatados e informativos
-- Integração com análise comparativa para múltiplos cenários
-
-*Maria Surreira* — Interface e experiência do utilizador:
-- Configuração intuitiva de 14 parâmetros diferentes
-- Modo What-If que simplifica análise de cenários
-- Design responsivo que funciona em diferentes resoluções
-
 #### Factores de Sucesso
 
 1. *Planeamento inicial detalhado* — Especificação clara dos requisitos evitou retrabalho
@@ -733,37 +604,13 @@ Embora desenvolvido como trabalho académico, a solução tem potencial para:
 
 Se este projeto fosse continuado, recomenda-se:
 
-1. *Primeiro passo:* Adicionar persistência em base de dados (SQLite simples seria suficiente)
+1. *Primeiro passo:* Adicionar persistência em base de dados 
 2. *Segundo passo:* Expandir para múltiplas especialidades com encaminhamento automático
 3. *Terceiro passo:* Implementar otimizador que sugira configurações ideais
-4. *Quarto passo:* Criar versão web (API + frontend) para acesso remoto
+4. *Quarto passo:* Criar versão web para acesso remoto
 
 #### Conclusão Final
 
 Este projeto demonstrou que conceitos teóricos de programação e modelação matemática podem ser aplicados de forma rigorosa e prática para resolver problemas reais. A equipa desenvolveu não apenas código funcional, mas uma ferramenta que pode genuinamente ser útil para análise de sistemas de saúde.
 
 A combinação de requisitos bem definidos, arquitetura sólida, implementação cuidadosa e validação rigorosa resultou numa solução que transcende o contexto académico. Este é exatamente o tipo de projeto que mostra o poder da computação quando aplicada a problemas reais com metodologia apropriada.
-
----
-
----
-
-## Limitações Conhecidas e Trabalho Futuro
-
-### Limitações Atuais
-
-1. Não suporta múltiplas especialidades médicas (todos os médicos tratam tudo)
-2. Não há integração com base de dados persistente
-3. Análise económica não implementada
-4. Não suporta agendamento prévio de consultas
-5. Simulação 3D não disponível
-
-### Extensões Propostas
-
-1. *Machine Learning:* Previsão de carga e otimização automática
-2. *Especialidades:* Suportar múltiplas áreas médicas com encaminhamento
-3. *Base de Dados:* Persistência de resultados para histórico
-4. *API Web:* Exposição de funcionalidades via REST API
-5. *Análise Económica:* Cálculo de custos operacionais
-6. *Visualização 3D:* Representação imersiva da clínica
-7. *Dashboard em Tempo Real:* Monitorização live de indicadores
