@@ -251,8 +251,17 @@ A interface gráfica abrirá permitindo:
 # Exemplos pré-configurados
 python example_avancado.py
 
-# Menu interativo com sete exemplos
-Escolha um exemplo (0-8): 1  # Simulação básica
+# Menu interativo com nove exemplos
+Escolha um exemplo (0-8): 
+1. Simulação básica
+2. Sistema de Triagem (Prioridades)
+3. Turnos e Pausas para Médicos
+4. Chegadas Não Homogêneas
+5. Simulação COMPLETA (Tudo ativado)
+6. Gerar Todos os Gráficos
+7. Análise Comparativa
+8. Executar todos os Exemplos
+0. Sair
 
 ---
 
@@ -452,8 +461,6 @@ Os 5 ficheiros Python foram desenvolvidos conforme especificação de requisitos
 - gera_tempo_consulta(prioridade: int = None) -> float — Gera tempo de consulta
 - procura_medico_livre(medicos: List, tempo_atual: float) -> Optional[Dict] — Procura médico disponível
 - inserir_na_fila_por_prioridade(fila: List, doente_info: Dict) — Insere doente ordenado
-
-*Complexidade:* O(n) para simulação com n eventos
 
 ### Classe AnalisadorResultados
 
