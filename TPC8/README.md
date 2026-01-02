@@ -343,7 +343,7 @@ Durante o desenvolvimento deste projeto, foram gerados diversos ficheiros que co
 ├── src/
 │   ├── sim_module_avancado.py
 │   ├── analysis_avancado.py
-│   ├── gui_corrigido_sem_emoji.py
+│   ├── gui_avancado.py
 │   ├── example_avancado.py
 │   └── main_avancado.py
 │
