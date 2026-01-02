@@ -75,11 +75,11 @@ O projeto está organizado em módulos especializados:
 projeto_atp_clinica/
 ├── sim_module_avancado.py        # Motor de simulação (eventos discretos)
 ├── analysis_avancado.py          # Análise e geração de gráficos
-├── gui_avancado.py               # Interface gráfica (PySimpleGUI)
+├── gui_avancado.py    # Interface gráfica (PySimpleGUI)
 ├── example_avancado.py           # Exemplos de utilização
 ├── main_avancado.py              # Ponto de entrada da aplicação
 ├── pessoas.json                  # Dataset de pacientes reais
-└── README.md                     # Esta documentação
+└── README.md                      # Esta documentação
 
 
 ### Componentes Principais
@@ -340,10 +340,11 @@ Durante o desenvolvimento deste projeto, foram gerados diversos ficheiros que co
 
 .
 ├── README.md                  (este ficheiro)
+│
 ├── src/
 │   ├── sim_module_avancado.py
 │   ├── analysis_avancado.py
-│   ├── gui_avancado.py
+│   ├── gui_corrigido_sem_emoji.py
 │   ├── example_avancado.py
 │   └── main_avancado.py
 │
