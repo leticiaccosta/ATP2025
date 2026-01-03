@@ -382,7 +382,7 @@ A combinação de requisitos bem definidos, arquitetura sólida, implementação
 Este é exatamente o tipo de projeto que mostra o poder da computação quando aplicada a problemas reais com metodologia apropriada e atenção aos detalhes práticos que fazem a diferença entre um exercício académico e uma ferramenta utilizável.
 
 ## Documentação
-- [Relatório Técnico Completo (PDF)]([./relatorio_projeto.pdf](https://github.com/user-attachments/files/24418668/relatorio_projeto.pdf))
+- [Relatório Técnico Completo (PDF)](https://github.com/user-attachments/files/24418668/relatorio_projeto.pdf)
 
 ### Código Fonte
 - [sim_module_avancado.py](https://github.com/user-attachments/files/24418678/sim_module_avancado.py) — Motor de simulação de eventos discretos
